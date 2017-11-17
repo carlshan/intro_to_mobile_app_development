@@ -22,6 +22,7 @@ export default class Board extends Component {
     this.renderBoard = this.renderBoard.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
     this.restartGame = this.restartGame.bind(this);
+    this.checkWin = this.checkWin.bind(this);
     this.state = {
       lastPlaced: '',
       gamePositions: [
@@ -41,6 +42,35 @@ export default class Board extends Component {
         ['', '', ''],
     ]
     })
+  }
+
+  checkWin() {
+    let currentGame = this.state.gamePositions;
+    for (let row = 0; row < SIZE; row++) {
+      if (currentGame[row][0] !== '' && currentGame[row][0] === currentGame[row][1] &&
+          currentGame[row][0] === currentGame[row][2]) {
+        return true;
+      }
+    }
+
+    for (let col = 0; col < SIZE; col++) {
+      if (currentGame[0][col] !== '' && currentGame[0][col] === currentGame[1][col] &&
+          currentGame[0][col] === currentGame[2][col]) {
+        return true;
+      }
+    }
+
+    if (currentGame[0][0] !== '' && currentGame[0][0] === currentGame[1][1] &&
+        currentGame[0][0] === currentGame[2][2]) {
+      return true;
+    }
+
+    if (currentGame[0][2] !== '' && currentGame[0][2] === currentGame[1][1] &&
+        currentGame[0][2] === currentGame[2][0]) {
+      return true;
+    }
+
+    return false;
   }
 
   updatePosition(row, col) {
@@ -75,7 +105,6 @@ export default class Board extends Component {
           top: row * SQUARE_SIZE + SQUARE_PADDING + 200
         }
 
-
         let square = <View key={square_key} style={[styles.square, position]}>
                         <TouchableOpacity onPress={(e) => this.updatePosition(row, col)} >
                           <Piece pieceType={this.state.gamePositions[row][col]} />
@@ -91,17 +120,31 @@ export default class Board extends Component {
   }
 
   render() {
-    let currentPlayer = this.state.lastPlaced == 'X' ? 'O' : 'X'
+
+    let win = this.checkWin();
+    if (win) {
+      return <View style={styles.container}>
+                <Text style={styles.instructionText}> {this.state.lastPlaced} has won! </Text>
+                <Button
+                  title="Restart Game"
+                  onPress={this.restartGame}
+                  color="white"
+                  style={styles.restartButton}
+                />
+              </View>
+    }
+
+    let currentPlayer = this.state.lastPlaced == 'X' ? 'O' : 'X';
     return (
       <View style={styles.container}>
         <Text style={styles.instructionText}> It is currently {currentPlayer}'s turn. </Text>
-        {this.renderBoard()}
-        <Button
-          title="Restart Game"
-          onPress={this.restartGame}
-          color="white"
-          style={styles.restartButton}
-        />
+          {this.renderBoard()}
+          <Button
+            title="Restart Game"
+            onPress={this.restartGame}
+            color="white"
+            style={styles.restartButton}
+          />
       </View>
     )
   }
