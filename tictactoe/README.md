@@ -148,4 +148,121 @@ If you run things you should see the following:
 
 ![Blank Screen](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/blank_screen.png?raw=true)
 
+#### Rendering An Actual Board
+Now that we have the skeleton down, let's actually render the board.
 
+In order to do that, we need a few additional elements. Modify your `Board.js` file to have a few more functions:
+
+1. `constructor()` - This function is like the **setup** function that will perform all the janitorial tasks.
+2. `renderBoard()` - This will actually do the render of the 9 spaces.
+3. `render()` - This is the critical function that all Components need in order to display anything.
+
+Let's tackle each of these one-by-one.
+
+#### 1. The `Constructor()`
+
+Add the `constructor()` function to the beginning of the Board component.
+
+```javascript
+import ...
+
+export default class Board extends Component {
+    constructor() {
+        super();
+      }
+	
+	render () {
+	    ...
+	}
+}
+
+```
+
+> **What the `constructor()` do?:** This is the function that gets called when your component is first created. It does all the messy work of setting up your component.
+
+#### 2. The `renderBoard()` function
+
+Now, let's add the `renderBoard()` function. 
+
+> **NOTE:** Even after you copy in the code below, your program still won't work. We need a few additional steps before we are there.
+
+```javascript
+// Board.js
+...
+
+export default class Board extends Component {
+    constructor() {
+        super();
+      }
+      
+    renderBoard () {
+        let result = [];
+
+        for (let row = 0; row < SIZE; row++) {
+          for (let col = 0; col < SIZE; col++) {
+            let square_key = row * SIZE + col;
+            let position = {
+              left: col * SQUARE_SIZE + SQUARE_PADDING + 40,
+              top: row * SQUARE_SIZE + SQUARE_PADDING + 200
+            }
+
+            let square = <View key={square_key} style={[styles.square, position]}>
+                            <TouchableOpacity onPress={() => {}} >
+                              <Text>{square_key}</Text>
+                            </TouchableOpacity>
+                         </View>
+            result.push(square);
+
+          }
+
+        }
+
+        return result;
+    }
+	
+	render () {
+	    ...
+	}
+}
+
+```
+
+Let's add the plumbing in order to get all this to link up.
+
+Modify the `constructor()` function like so:
+
+```javascript
+// Board.js
+
+export default class Board extends Component {
+    constructor() {
+        super();
+        this.renderBoard = this.renderBoard.bind(this);
+    }
+    
+    render () {
+        ...
+    }
+}
+```
+
+> **What the `this.renderBoard.bind(this)` do?:** This *binds* the function to the component. You need to do this for every function you write in the class.
+
+Now, let's modify the `render()` function like so:
+
+```javascript
+...
+
+    render () {
+        return (
+        <View style={styles.container}>
+        	<Text style={styles.instructionText}> This is the board </Text>
+          {this.renderBoard()}
+        </View>
+        )
+    }
+   
+...
+```
+
+> **What the `{this.renderBoard()}` do?:** This *calls* the `renderBoard()` function. Since the function returns an array of other components, all of these other components will get rendered.
