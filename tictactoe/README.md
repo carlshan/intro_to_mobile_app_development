@@ -3,7 +3,7 @@ In this tutorial we are going to make a tic-tac-toe game using React Native.
 
 Your final product will look like the below:
 
-![Final Tictactoe](/images/final_tictactoe.png)
+![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/final_tictactoe.png?raw=true)
 
 ## Setup
 We need to do a few things in order to start off our program.
@@ -23,7 +23,7 @@ The reason we are making these files is to separate the code that controls diffe
 
 See the below for what I mean:
 
-![Division](/images/division.png)
+![Division](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/division.png?raw=true)
 
 So now let's get to editing each of the three files.
 
