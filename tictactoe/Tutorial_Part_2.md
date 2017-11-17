@@ -1,6 +1,6 @@
 ### `Piece.js`
 
-We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `**X**` or `**O**` tictactoe piece.
+We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `X` or `O` tictactoe piece.
 
 So let's modify the `Piece.js` file.
 
@@ -173,3 +173,84 @@ to instead
 ```
 
 Try that for yourself to see what happens!
+
+### Allowing for User Input
+Let's now allow for users to tap on squares and set a X or O.
+
+Modify the `Board.js` file as follows.
+
+#### First, modify the `constructor()` function
+
+We are going to add a `.state` attribute to Board to hold an internal representation of the game's positions. We'll store that in a variable called `gamePositions`.
+
+We are also going to keep track of whose turn it is by keeping track of who the last person to put something down is in a variable called `lastPlaced`.
+
+```javascript
+// Board.js
+...
+export default class Board extends Component {
+    constructor(props){
+        super(props);
+        this.renderBoard = this.renderBoard.bind(this);
+        this.state = {
+            lastPlaced: '',
+            gamePositions: [
+                ['', '', ''],
+                ['', '', ''],
+                ['', '', ''],
+            ]
+       }
+  }
+```
+
+Now that we have add a function that will execute every time someone taps on one of the 9 squares.
+
+Add the following function below:
+
+```javascript
+
+export default class Board extends Component {
+   ...
+   
+    updatePosition(row, col) {
+        // the below line makes a copy of this.state.gamePositions
+        let newPositions = Object.assign({}, this.state.gamePositions);
+        let toPlace = this.state.lastPlaced == 'X' ? 'O' : 'X'
+        let currentPiece = newPositions[row][col];
+        if (currentPiece == '') {
+            // since currentPiece is an empty string '', we can put down a piece
+           newPositions[row][col] = toPlace
+
+           this.setState({
+               gamePositions: newPositions,
+           lastPlaced: toPlace
+          })
+        } else {
+          // there's already a piece there so we can't put anything down.
+          // so this function should just return nothing.
+          return null
+        }
+  }
+  ...
+  }
+  ```
+  The above `updatePosition()` function modifies `this.state.gamePositions` variable depending on which row and column the user tapped.
+  
+  Now, we need to modify the `render()` function to take this into account.
+  
+  Change the `render()` function to the below:
+  
+  ```javascript
+  ...
+      render () {
+          ...
+          let square = <View key={square_key} style={[styles.square, position]}>
+                        <TouchableOpacity onPress={(e) => this.updatePosition(row, col)} >
+                            <Piece pieceType={this.state.gamePositions[row][col]} />
+                        </TouchableOpacity>
+                     </View>
+          ...  
+    }
+    ...
+
+  ```
