@@ -13,8 +13,6 @@ const SIZE = 3; // 3-by-3 grid for Tic-Tac-Toe
 const SQUARE_SIZE = Math.floor(width * 0.25);
 const SQUARE_PADDING = Math.floor(SQUARE_SIZE * 0.05);
 const BORDER_RADIUS = SQUARE_PADDING * 2;
-const TILE_SIZE = SQUARE_SIZE - BORDER_RADIUS;
-const IMAGE_SIZE = Math.floor(TILE_SIZE * 0.50);
 
 export default class Board extends Component {
   constructor(props){
