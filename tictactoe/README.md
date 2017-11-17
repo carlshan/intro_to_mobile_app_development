@@ -1,7 +1,7 @@
 # Tic Tac Toe Tutorial
 In this tutorial we are going to make a tic-tac-toe game using React Native. 
 
-Your final product will look like the below:
+Your final React Native app will look like the below:
 
 ![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/final_tictactoe.png?raw=true)
 
@@ -275,124 +275,7 @@ Now that we've done all this plumbing, try running your program. You should see 
 
 ![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/numbers.png?raw=true)
 
-### `Piece.js`
+Nice job!
 
-We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `**X**` or `**O**` tictactoe piece.
-
-So let's modify the `Piece.js` file.
-
-I'm going to break the code we're adding into the `Piece.js` file into three sections and explain each one:
-
-##### Part 1: Importing
-```javascript
-import {
-  StyleSheet,
-  Image,
-} from 'react-native';
-import React, { Component } from 'react';
-```
-
-Nothing fancy to see here. This just imports things as we've seen before.
-
-Copy it into the top of `Piece.js`
-
-##### Part 2: Creating the Component
-
-Now add this code to `Piece.js`:
-
-```javascript
-
-export default class Piece extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        let img;
-        if (this.props.pieceType == "X") {
-            img = <Image style={styles.piece} source={require('../images/X.png')} />
-        } else if (this.props.pieceType == "O"){
-            img = <Image style={styles.piece} source={require('../images/O.png')} />
-        } else {
-            img = <Image style={styles.piece} />
-        }
-        return (
-            img
-        )
-    }
-}
-```
-What does this do?
-
-The above code creates our Component class called `Piece`.
-
-It has a `constructor()` function as we've seen in the `Board` component. This constructor looks a little bit funky.
-
-Wait. So why do we have the following? What's up with the `props` argument in the `constructor()` function? And in the `super()` function?
-
-```javascript
-    constructor(props) {
-        super(props);
-    }
-```
-
-What does this `props` stuff mean?
-
-> **What is `props`?:** props is essentially a JavaScript object that contains all of the data and information that will be passed to this `Piece` component by the `Board` component.
-
-Finally, let's add this `style` variable to the bottom of the `Piece.js` file:
-
-```javascript
-const styles = StyleSheet.create({
-  piece: {
-    height: 50,
-    width: 50
-  }
-});
-```
-
-This adds the styling that our `Piece` component will use.
-
-Reload your application. 
-
-It shouldn't change. Why not?
-
-It's because although we made a `Piece` component that we stuck in the `Piece.js` file, we haven't used this component anywhere else!
-
-Let's add it to our `Board` component back in `Board.js`.
-
-#### Modifying `Board.js`
-Let's go back to the `Board` class and modify the `renderBoard()` function to take advantage of our `Piece` component.
-
-First, let's import the Piece component. Add this the top of the `Board.js` file:
-
-```javascript
-import Piece from './Piece';
-...
-```
-
-Now that we have imported the `Piece` component, we need to use it:
-
-```javascript
-...
-    renderBoard() {
-        ...
-        for (let row = 0; row < SIZE; row++) {
-            for (let col = 0; col < SIZE; col++) {
-                ...
-                let square = <View key={square_key} style={[styles.square, position]}>
-                        <TouchableOpacity onPress={() => {}} >
-                          <Piece pieceType="X"></Piece> // <- Add this line of code.
-                        </TouchableOpacity>
-                     </View>
-                 ...
-                      
-    }
-    ...
-```
-
-Your app should now render this:
-
-![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/board_placeholder_xs.png?raw=true)
-
+So now let's go on to the next part of the tutorial: [go to Part 2.](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_2.md)
 
