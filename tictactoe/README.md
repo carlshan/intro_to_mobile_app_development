@@ -171,9 +171,9 @@ export default class Board extends Component {
         super();
       }
 	
-	render () {
-	    ...
-	}
+    render () {
+        ...
+    }
 }
 
 ```
@@ -220,9 +220,9 @@ export default class Board extends Component {
         return result;
     }
 	
-	render () {
-	    ...
-	}
+    render () {
+        ...
+    }
 }
 
 ```
@@ -233,17 +233,20 @@ Modify the `constructor()` function like so:
 
 ```javascript
 // Board.js
+....
 
 export default class Board extends Component {
     constructor() {
         super();
-        this.renderBoard = this.renderBoard.bind(this);
+        this.renderBoard = this.renderBoard.bind(this); // <- Add this additional line
     }
     
     render () {
         ...
     }
 }
+
+...
 ```
 
 > **What the `this.renderBoard.bind(this)` do?:** This *binds* the function to the component. You need to do this for every function you write in the class.
@@ -256,8 +259,8 @@ Now, let's modify the `render()` function like so:
     render () {
         return (
         <View style={styles.container}>
-        	<Text style={styles.instructionText}> This is the board </Text>
-          {this.renderBoard()}
+            <Text style={styles.instructionText}> This is the board </Text>
+            {this.renderBoard()} // <- Add this additional line
         </View>
         )
     }
@@ -266,3 +269,7 @@ Now, let's modify the `render()` function like so:
 ```
 
 > **What the `{this.renderBoard()}` do?:** This *calls* the `renderBoard()` function. Since the function returns an array of other components, all of these other components will get rendered.
+
+Now that we've done all this plumbing, try running your program. You should see the following:
+
+![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/numbers.png?raw=true)
