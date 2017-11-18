@@ -17,15 +17,15 @@ render () {
     if (this.state.lastPlaced == "X") {
     	// **YOUR CODE HERE**
     } else if (this.state.lastPlaced == "O") {
-	    // **YOUR CODE HERE**
+        // **YOUR CODE HERE**
     } else {
-	    // This only occurs if this.state.lastplaced == ''
-	    // **YOUR CODE HERE**
+        // This only occurs if this.state.lastplaced == ''
+        // **YOUR CODE HERE**
     }
 
     return (
     <View style={styles.container}>
-            <Text style={styles.instructionText}> It is currently {currentPlayer}'s turn. </Text>
+            <Text style={styles.instructionText}> Current Player: {currentPlayer}. </Text>
               {this.renderBoard()}
               <Button
                 title="Restart Game"
@@ -54,7 +54,9 @@ In the `render()` method of our `Board` component, add a `<Button>` component un
 Now it is **YOUR** job to define a function called `restartGame` inside the `Board` component that will make this button work.
 
 > **HINT:** Since the `Board` component relies upon `this.state.gamePositions` to render everything, what should `this.state.gamePositions` change into when someone taps the *Restart Game* button?
+
 > **HINT:** You will need to use `this.setState()`.
+
 > **HINT:** Remember to also add the `this.restartGame = this.restartGame.bind(this);` line to the `constructor()` function.
 
 ### Exercise 2: Checking to see if Player has won
@@ -110,7 +112,7 @@ render() {
     
     return (
     	<View style={styles.container}>
-        <Text style={styles.instructionText}> It is currently {currentPlayer}'s turn. </Text>
+        <Text style={styles.instructionText}> Current Player: {currentPlayer} </Text>
           {this.renderBoard()}
           <Button
             title="Restart Game"
