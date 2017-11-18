@@ -1,5 +1,7 @@
 # Part 3 of 3 of the Tic-Tac-Toe Game Tutorial
 
+Make sure you've completed [part 2 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_2.md) before you continue.
+
 In this third and final part of the game tutorial, you will complete the following exercises.
 
 If you solve these exercises, help those around you finish them!
@@ -117,3 +119,6 @@ render() {
 ```
   
   > **HINT:** Remember to also add the `this.checkWin = this.checkWin.bind(this);` line to the `constructor()` function.
+  
+  ## Finished?
+  If you've completed all three steps above, congratulations! You have a functioning tic-tac-toe game built using React Native. Great work!
