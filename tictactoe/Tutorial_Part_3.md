@@ -1,6 +1,8 @@
 # Part 3 of 3 of the Tic-Tac-Toe Game Tutorial
 
-In this third and final part of the game tutorial, you will complete the following exercises:
+In this third and final part of the game tutorial, you will complete the following exercises.
+
+If you solve these exercises, help those around you finish them!
 
 ### Exercise 0: Show whose turn it is in
 
@@ -91,10 +93,10 @@ checkWin() {
     
     // the only time the line below will execute is if everything above has failed
     return false;
-    }
+}
   ```
   
-After you're done writing it, check to see if it's successful by adding this in the `render()` method of the `Board` component:
+After you're done writing it, check to see if it's successful by adding this in the `render()` method of the `Board` component to the beginning of the function:
   
 ```javascript
 ...
@@ -109,19 +111,7 @@ render() {
     }
     
     ...
-    
-    return (
-    	<View style={styles.container}>
-        <Text style={styles.instructionText}> Current Player: {currentPlayer} </Text>
-          {this.renderBoard()}
-          <Button
-            title="Restart Game"
-            onPress={this.restartGame}
-            color="white"
-            style={styles.restartButton}
-          />
-      </View>
-    )
+   
 }
 ...
 ```
