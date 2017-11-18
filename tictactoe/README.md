@@ -25,7 +25,7 @@ Here's what you need to do:
 
 When you are done, your file and folder structure should look like the following:
 
-![File and Folders](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/file_and_folders.png)
+![File and Folders](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/file_and_folders2.png)
 
 The reason we are making these files is to separate the code that controls different parts of our program into different files. We want each file to be "resposible" for a different part of our code.
 
