@@ -1,11 +1,15 @@
 # Part 1 of 3 of the Tic-Tac-Toe Tutorial
+Made by: Carl Shan, CS teacher at Nueva School in San Mateo, CA
+Acknowledgements: Some code and ideas borrowed from [Zhen Wang](http://blog.zmxv.com/2016/01/lets-write-a-mobile-game-with-react-native.html) and [Nicolas Gallagher](https://codepen.io/necolas/pen/eJaLZd?editors=0010).
+
+## Introduction
 In this tutorial we are going to make a tic-tac-toe game using React Native. 
 
 Your final React Native app will look like the below:
 
 ![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/final_tictactoe.png?raw=true)
 
-## Setup for Middle School
+## Setup
 We need to do a few things in order to start off our program.
 
 **NOTE for Middle School Students:** Remember that, for many of you, since you don't have `sudo` access you couldn't `npm start` in new folders you created with the `create-react-native-app`. Instead, we are going to modify the `my-app` folder that many of you were successfully able to use.
