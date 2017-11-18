@@ -14,12 +14,18 @@ Here's what you need to do:
 
 1. Go into your `my-app` folder and save your old work by making a copy of the files. We are going to be overwriting the `App.js` file.
 	* You can save the old `App.js` with a different name.
-2. Now delete everything in `App.js`
-3. Download the `images` folder on Google Classroom and move it into your `my-app` folder. This folder contains two images. 
-	* Take a look to see what they are.
-4. Make a folder called `components` in the `my-app` folder.
-5. Make a file called `Piece.js` in the `components` folder.
-6. Make another file called `Board.js` in the `components` folder.
+2. Now delete everything in `App.js` and save.
+3. Make a folder called `images` in the folder.
+4. Go to the following two links, save them and put them into the 'images' folder.
+	* [Download this image of "X"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/tictactoe/images/X.png)
+	* [Download this image of "O"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/tictactoe/images/O.png)
+5. Make another folder called `components` in the `my-app` folder.
+6. Make an empty file called `Piece.js` in the `components` folder.
+7. Make another empty file called `Board.js` in the `components` folder.
+
+When you are done, your file and folder structure should look like the following:
+
+![File and Folders](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/file_and_folders.png)
 
 The reason we are making these files is to separate the code that controls different parts of our program into different files. We want each file to be "resposible" for a different part of our code.
 
