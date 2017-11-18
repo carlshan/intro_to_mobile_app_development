@@ -1,5 +1,6 @@
 # Part 1 of 3 of the Tic-Tac-Toe Tutorial
-Made by: Carl Shan, CS teacher at Nueva School in San Mateo, CA
+Written by: Carl Shan, CS teacher at Nueva School in San Mateo, CA
+
 Acknowledgements: Some code and ideas borrowed from [Zhen Wang](http://blog.zmxv.com/2016/01/lets-write-a-mobile-game-with-react-native.html) and [Nicolas Gallagher](https://codepen.io/necolas/pen/eJaLZd?editors=0010).
 
 ## Introduction
