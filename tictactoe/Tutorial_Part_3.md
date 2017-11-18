@@ -6,7 +6,7 @@ In this third and final part of the game tutorial, you will complete the followi
 
 If you solve these exercises, help those around you finish them!
 
-### Exercise 0: Show whose turn it is in
+## Exercise 0: Show whose turn it is in
 
 Edit the `render()` function to display whose turn it is.
 
@@ -42,7 +42,7 @@ render () {
 }
 ```
 
-### Exercise 1: Define the `restartGame()` function
+## Exercise 1: Define the `restartGame()` function
 
 In the `render()` method of our `Board` component, add a `<Button>` component underneath `this.renderBoard()`. 
 
@@ -63,7 +63,7 @@ Now it is **YOUR** job to define a function called `restartGame` inside the `Boa
 
 > **HINT:** Remember to also add the `this.restartGame = this.restartGame.bind(this);` line to the `constructor()` function.
 
-### Exercise 2: Checking to see if Player has won
+## Exercise 2: Checking to see if Player has won
 Currently, our game doesn't check to see if anyone has won.
 
 Write a function called `checkWin()` inside the `Board` component to check if a player has won. The function should return `true` if there is a winner and `false` otherwise:

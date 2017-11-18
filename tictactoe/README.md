@@ -153,7 +153,7 @@ If you run things you should see the following:
 
 ![Blank Screen](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/blank_screen.png?raw=true)
 
-#### Rendering An Actual Board
+### Rendering An Actual Board
 Now that we have the skeleton down, let's actually render the board.
 
 In order to do that, we need a few additional elements. Modify your `Board.js` file to have a few more functions:
@@ -164,7 +164,7 @@ In order to do that, we need a few additional elements. Modify your `Board.js` f
 
 Let's tackle each of these one-by-one.
 
-#### 1. The `Constructor()`
+#### 1. The `Constructor()` function
 
 Add the `constructor()` function to the beginning of the Board component.
 
