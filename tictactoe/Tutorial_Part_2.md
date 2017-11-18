@@ -2,7 +2,7 @@
 
 Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/README.md) before you go on.
 
-### `Piece.js`
+## `Piece.js`
 
 We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `X` or `O` tictactoe piece.
 
@@ -10,7 +10,7 @@ So let's modify the `Piece.js` file.
 
 I'm going to break the code we're adding into the `Piece.js` file into three sections and explain each one:
 
-##### Part 1: Importing
+### Part 1: Importing
 ```javascript
 import {
   StyleSheet,
@@ -23,7 +23,7 @@ Nothing fancy to see here. This just imports things as we've seen before.
 
 Copy it into the top of `Piece.js`
 
-##### Part 2: Creating the Component
+### Part 2: Creating the Component
 
 Now add this code to `Piece.js`:
 
@@ -88,7 +88,7 @@ It's because although we made a `Piece` component that we stuck in the `Piece.js
 
 Let's add it to our `Board` component back in `Board.js`.
 
-#### Modifying `Board.js`
+## Modifying `Board.js`
 
 Let's go back to the `Board` class and modify the `renderBoard()` function to take advantage of our `Piece` component.
 
@@ -178,12 +178,12 @@ to instead
 
 Try that for yourself to see what happens!
 
-### Allowing for User Input
+## Allowing for User Input
 Let's now allow for users to tap on squares and set a X or O.
 
 Modify the `Board.js` file as follows.
 
-#### First, modify the `constructor()` function
+### First, modify the `constructor()` function
 
 We are going to add a `.state` attribute to Board to hold an internal representation of the game's positions. We'll store that in a variable called `gamePositions`.
 
@@ -207,6 +207,7 @@ export default class Board extends Component {
   }
 ```
 
+### Adding the `updatePosition` function
 Now that we have add a function that will execute every time someone taps on one of the 9 squares.
 
 Add the following function below:
@@ -239,10 +240,11 @@ export default class Board extends Component {
   }
   ```
   
-  The above `updatePosition()` function modifies `this.state.gamePositions` variable depending on which row and column the user tapped.
+The above `updatePosition()` function modifies `this.state.gamePositions` variable depending on which row and column the user tapped.
   
 Okay, but now we need to `.bind()` it. Remember, we have to `.bind()` every function we make in our component.
-  
+
+### Modifying the `constructor` and `render`
 Modify the constructor function:
 
 ```javascript
