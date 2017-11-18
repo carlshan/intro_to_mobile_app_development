@@ -1,3 +1,7 @@
+# Part 2 of 3 of the Tic-Tac-Toe Game Tutorial
+
+Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/README.md) before you go on.
+
 ### `Piece.js`
 
 We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `X` or `O` tictactoe piece.
@@ -234,9 +238,23 @@ export default class Board extends Component {
   ...
   }
   ```
+  
   The above `updatePosition()` function modifies `this.state.gamePositions` variable depending on which row and column the user tapped.
   
-  Now, we need to modify the `render()` function to take this into account.
+Okay, but now we need to `.bind()` it. Remember, we have to `.bind()` every function we make in our component.
+  
+Modify the constructor function:
+
+```javascript
+constructor() {
+     super();
+    ...
+    this.updatePosition = this.updatePosition.bind(this);
+    ...
+}
+```
+  
+Now, we need to modify the `render()` function to take use our `updatePosition` function.
   
   Change the `render()` function to the below:
   
@@ -245,8 +263,8 @@ export default class Board extends Component {
       render () {
           ...
           let square = <View key={square_key} style={[styles.square, position]}>
-                        <TouchableOpacity onPress={(e) => this.updatePosition(row, col)} >
-                            <Piece pieceType={this.state.gamePositions[row][col]} />
+                        <TouchableOpacity onPress={(e) => this.updatePosition(row, col)} > // <- Modify this line.
+                            <Piece pieceType={this.state.gamePositions[row][col]} /> // <- Modify this line.
                         </TouchableOpacity>
                      </View>
           ...  
@@ -254,3 +272,16 @@ export default class Board extends Component {
     ...
 
   ```
+  
+What did we do?
+  
+Instead of passing to the `Piece` component either "X" or "O", we pass it whatever happens to be in the row and column position of `this.state.gamePositions`.
+  
+And `this.state.gamePositions` is updated every time the square is tapped through the `onPress` prop of the `TouchableOpacity` component. We gave the `onPress` prop a new function that essentially calls `this.updatePosition()` function with the relevant `row` and `col` arguments.
+
+Tada! Now we have linked everything together so that users can tap squares and put down an "X" or "O".
+
+Try your code to verify that everything works up until this point.
+
+If everything is dandy, you can [move on to the last part of the tutorial where you will be working on a number of different exercises](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_3.md).
+

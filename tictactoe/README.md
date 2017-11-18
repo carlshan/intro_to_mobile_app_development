@@ -1,4 +1,4 @@
-# Tic Tac Toe Tutorial
+# Part 1 of 3 of the Tic-Tac-Toe Tutorial
 In this tutorial we are going to make a tic-tac-toe game using React Native. 
 
 Your final React Native app will look like the below:
