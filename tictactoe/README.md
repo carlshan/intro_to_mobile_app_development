@@ -8,7 +8,9 @@ Your final React Native app will look like the below:
 ## Setup for Middle School
 We need to do a few things in order to start off our program.
 
-> **NOTE for Middle School Students:** Remember that, for many of you, since you don't have `sudo` access you couldn't `npm start` in new folders you created with the `create-react-native-app`. Instead, we are going to modify the `my-app` folder that many of you were successfully able to use.
+**NOTE for Middle School Students:** Remember that, for many of you, since you don't have `sudo` access you couldn't `npm start` in new folders you created with the `create-react-native-app`. Instead, we are going to modify the `my-app` folder that many of you were successfully able to use.
+
+Here's what you need to do:
 
 1. Go into your `my-app` folder and save your old work by making a copy of the files. We are going to be overwriting the `App.js` file.
 	* You can save the old `App.js` with a different name.
@@ -33,6 +35,7 @@ Our App.js file is going to be super simple.
 All it's going to do is render the <Board> </Board> component. Copy and paste the following code into your App.js file:
 
 ```javascript
+// App.js
 import Board from './components/Board';
 import React, { Component } from 'react';
 
@@ -49,7 +52,7 @@ Now, we are done with `App.js`! We will not be modifying it for the rest of the 
 
 But your app won't run yet until we fill out `Board.js` and `Piece.js`.
 
-## `Board.js`
+## Editing `Board.js`
 Now let's just draw out the simply layout of the board.
 
 Open the `Board.js` file in your `components` folder and copy the following code into it:
@@ -125,6 +128,8 @@ const styles = StyleSheet.create({
 Now that we have our styles, let's actually create a Component class called `Board` and add  a `render` function. Put it in between the declaration of all the constants (`const`) and the `style` variable.:
 
 ``` javascript
+// Board.js 
+
 import ...
 
 ...
@@ -164,6 +169,8 @@ Let's tackle each of these one-by-one.
 Add the `constructor()` function to the beginning of the Board component.
 
 ```javascript
+// Board.js
+
 import ...
 
 export default class Board extends Component {
@@ -255,6 +262,8 @@ export default class Board extends Component {
 Now, let's modify the `render()` function like so:
 
 ```javascript
+// Board.js
+
 ...
 
     render () {

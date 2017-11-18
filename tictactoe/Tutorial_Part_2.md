@@ -2,7 +2,7 @@
 
 Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/README.md) before you go on.
 
-## `Piece.js`
+## Editing `Piece.js`
 
 We are going to now modify our `Piece.js` file. This is the file that will create a Component that represents an `X` or `O` tictactoe piece.
 
@@ -10,8 +10,10 @@ So let's modify the `Piece.js` file.
 
 I'm going to break the code we're adding into the `Piece.js` file into three sections and explain each one:
 
-### Part 1: Importing
+### Part 1: Importing libraries
 ```javascript
+// Piece.js
+
 import {
   StyleSheet,
   Image,
@@ -23,11 +25,12 @@ Nothing fancy to see here. This just imports things as we've seen before.
 
 Copy it into the top of `Piece.js`
 
-### Part 2: Creating the Component
+### Part 2: Creating the `Piece` Component
 
 Now add this code to `Piece.js`:
 
 ```javascript
+// Piece.js
 
 export default class Piece extends Component {
     constructor(props) {
@@ -58,9 +61,13 @@ It has a `constructor()` function as we've seen in the `Board` component. This c
 Wait. So why do we have the following? What's up with the `props` argument in the `constructor()` function? And in the `super()` function?
 
 ```javascript
+// Piece.js
+
+export default class Piece extends Component {
     constructor(props) {
         super(props);
     }
+}
 ```
 
 What does this `props` stuff mean?
@@ -70,6 +77,10 @@ What does this `props` stuff mean?
 Finally, let's add this `style` variable to the bottom of the `Piece.js` file:
 
 ```javascript
+// Piece.js
+
+...
+
 const styles = StyleSheet.create({
   piece: {
     height: 50,
@@ -92,16 +103,22 @@ Let's add it to our `Board` component back in `Board.js`.
 
 Let's go back to the `Board` class and modify the `renderBoard()` function to take advantage of our `Piece` component.
 
+### Step 1: Importing libraries
 First, let's import the Piece component. Add this the top of the `Board.js` file:
 
 ```javascript
+// Board.js
+
 import Piece from './Piece';
 ...
 ```
 
+### Step 2: Using the <Piece> Component in `renderBoard()`
 Now that we have imported the `Piece` component, we need to use it:
 
 ```javascript
+// Board.js
+
 ...
     renderBoard() {
         ...
@@ -148,6 +165,7 @@ Here is what you copied into the `Piece.js` file earlier in this tutorial.
 
 ```javascript
 // Piece.js
+
 render() {
     let img;
     if (this.props.pieceType == "X") {
@@ -183,7 +201,7 @@ Let's now allow for users to tap on squares and set a X or O.
 
 Modify the `Board.js` file as follows.
 
-### First, modify the `constructor()` function
+### Step 1: Modify the `constructor()` function
 
 We are going to add a `.state` attribute to Board to hold an internal representation of the game's positions. We'll store that in a variable called `gamePositions`.
 
@@ -207,12 +225,15 @@ export default class Board extends Component {
   }
 ```
 
-### Adding the `updatePosition` function
+### Step 2: Adding the `updatePosition` function
 Now that we have add a function that will execute every time someone taps on one of the 9 squares.
 
 Add the following function below:
 
 ```javascript
+// Board.js
+
+...
 
 export default class Board extends Component {
    ...
@@ -244,10 +265,12 @@ The above `updatePosition()` function modifies `this.state.gamePositions` variab
   
 Okay, but now we need to `.bind()` it. Remember, we have to `.bind()` every function we make in our component.
 
-### Modifying the `constructor` and `render`
+### Step 3: Modifying the `constructor` and `render`
 Modify the constructor function:
 
 ```javascript
+// Board.js
+
 constructor() {
      super();
     ...
