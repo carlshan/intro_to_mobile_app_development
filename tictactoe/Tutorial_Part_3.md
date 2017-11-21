@@ -31,12 +31,6 @@ render () {
     <View style={styles.container}>
             <Text style={styles.instructionText}> Current Player: {currentPlayer}. </Text>
               {this.renderBoard()}
-              <Button
-                title="Restart Game"
-                onPress={this.restartGame}
-                color="white"
-                style={styles.restartButton}
-              />
     </View>
       )
 }
