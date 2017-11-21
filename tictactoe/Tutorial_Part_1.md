@@ -3,6 +3,12 @@ Written by: Carl Shan, CS teacher at Nueva School in San Mateo, CA
 
 Acknowledgements: Some code and ideas borrowed from [Zhen Wang](http://blog.zmxv.com/2016/01/lets-write-a-mobile-game-with-react-native.html) and [Nicolas Gallagher](https://codepen.io/necolas/pen/eJaLZd?editors=0010).
 
+This is part 1 of a 3 part tutorial. You can find the other two links to the tutorial below:
+1. [Part 2 of the Tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_2.md)
+2. [Part 3 of the Tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_3.md)
+
+
+
 ## Introduction
 In this tutorial we are going to make a tic-tac-toe game using React Native. 
 

@@ -1,6 +1,6 @@
 # Part 2 of 3 of the Tic-Tac-Toe Game Tutorial
 
-Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/README.md) before you go on.
+Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_1.md) before you go on.
 
 ## Editing `Piece.js`
 
