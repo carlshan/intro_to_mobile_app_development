@@ -265,7 +265,7 @@ The above `updatePosition()` function modifies `this.state.gamePositions` variab
   
 Okay, but now we need to `.bind()` it. Remember, we have to `.bind()` every function we make in our component.
 
-### Step 3: Modifying the `constructor` and `render`
+### Step 3: Modifying the `constructor` and `renderBoard`
 Modify the constructor function:
 
 ```javascript
@@ -279,13 +279,13 @@ constructor() {
 }
 ```
   
-Now, we need to modify the `render()` function to take use our `updatePosition` function.
+Now, we need to modify the `renderBoard()` function to take use our `updatePosition` function.
   
-  Change the `render()` function to the below:
+  Change the `renderBoard()` function to the below:
   
   ```javascript
   ...
-      render () {
+      renderBoard () {
           ...
           let square = <View key={square_key} style={[styles.square, position]}>
                         <TouchableOpacity onPress={(e) => this.updatePosition(row, col)} > // <- Modify this line.
