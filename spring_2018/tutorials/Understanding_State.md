@@ -15,16 +15,16 @@ import React from 'react';
 import { Text } from 'react-native';
 
 default export class MyApp extends React.Component {
-	constructor() {
-		super();
-		this.state = {name: 'Carl'}
-	}
+    constructor() {
+        super();
+        this.state = {name: 'Carl'}
+    }
 	
-	render() {
-		return (
-			<Text> Hello {this.state.name} </Text>
-		)
-	}
+    render() {
+        return (
+        <Text> Hello {this.state.name} </Text>
+        )
+    }
 
 }
 ```
@@ -46,10 +46,10 @@ Let's modify our `render()` function to also return a `<Button />`
 
 ```javascript
 render() {
-	return (
-		<Text> Hello {this.state.name} </Text>
-		<Button />
-	)
+    return (
+        <Text> Hello {this.state.name} </Text>
+        <Button />
+    )
 }
 ```
 
@@ -57,12 +57,12 @@ However, since React Native doesn't allow our `render()` function to return mult
 
 ```javascript
 render() {
-	return (
-		<View>
-			<Text> Hello {this.state.name} </Text>
-			<Button />
-		</View>
-	)
+    return (
+        <View>
+            <Text> Hello {this.state.name} </Text>
+             <Button />
+        </View>
+    )
 }
 ```
 
@@ -70,14 +70,14 @@ render() {
 
 ```javascript
 render() {
-	return (
-		<View>
-			<Text> Hello {this.state.name} </Text>
-			<Button 
-				title="Press Me!"
-			/>
-		</View>
-	)
+    return (
+        <View>
+            <Text> Hello {this.state.name} </Text>
+            <Button 
+                title="Press Me!"
+            />
+        </View>
+        )
 }
 ```
 
@@ -93,15 +93,15 @@ changeName() {
 }
 
 render() {
-	return (
-		<View>
-			<Text> Hello {this.state.name} </Text>
-			<Button 
-				title="Press Me!"
-				onPress = {this.changeName}
-			/>
-		</View>
-	)
+    return (
+        <View>
+            <Text> Hello {this.state.name} </Text>
+            <Button 
+                title="Press Me!"
+                onPress = {this.changeName}
+            />
+        </View>
+        )
 }
 ```
 
@@ -113,20 +113,20 @@ Take a look at the changes to the `changeName()` function below and see if you c
 
 ```javascript
 changeName() {
-	let newName = "Donald Duck"
-	this.setState( {name: newName} )
+    let newName = "Donald Duck"
+    this.setState( {name: newName} )
 }
 
 render() {
-	return (
-		<View>
-			<Text> Hello {this.state.name} </Text>
-			<Button 
-				title="Press Me!"
-				onPress = {this.changeName}
-			/>
-		</View>
-	)
+    return (
+        <View>
+            <Text> Hello {this.state.name} </Text>
+            <Button 
+                title="Press Me!"
+                onPress = {this.changeName}
+            />
+        </View>
+        )
 }
 ```
 
@@ -146,9 +146,9 @@ We need to update the `constructor()` function as so:
 
 ```javascript
 constructor() {
-	super();
-	this.changeName = this.changeName.bind(this)
-	this.state = {name: 'Carl'}
+    super();
+    this.changeName = this.changeName.bind(this)
+    this.state = {name: 'Carl'}
 }
 
 ```
