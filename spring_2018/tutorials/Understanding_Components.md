@@ -34,7 +34,7 @@ default export class MyComponent extends React.Component {
 
 If you use `npm start` and boot up the app made above, it should look something like the below.
 
-![Basic Render](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/01_firstapp/images/basic_render.png)
+![Basic Render](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/basic_render.png)
 
 Super easy right?
 

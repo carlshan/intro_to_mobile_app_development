@@ -1,15 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Alert } from 'react-native';
+//import Greeting from './Components/Greeting'
 
 export default class App extends React.Component {
-  render() {
+  // constructor() {
+  //   super();
+  //   this.changeState = this.changeState.bind(this)
+  //   this.state = {'whatSomeoneTypes': 'this is a new sentence'}
+  // }
+  //
+  // changeState (text) {
+  //   var newState = {'whatSomeoneTypes': text}
+  //   this.setState(newState)
+  //   }
+
+  // render() {
+  //   return (
+  //     <View style={styles.container}>
+  //       <Greeting
+  //           firstName={}
+  //       />
+  //     </View>
+  //   );
+  // }
+
+  render () {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Text> Here is some chill text </Text>
       </View>
-    );
+    )
   }
 }
 
