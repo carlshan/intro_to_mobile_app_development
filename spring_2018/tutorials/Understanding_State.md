@@ -55,7 +55,14 @@ render() {
 
 However, since React Native doesn't allow our `render()` function to return multiple components, we need to wrap all of it in a `<View>` component.
 
+So let's make sure we import the `<View>` component and then let's use it.
+
 ```javascript
+// At the top of your file
+import { Text, View } from 'react-native';
+
+...
+
 render() {
     return (
         <View>
@@ -68,7 +75,12 @@ render() {
 
 ### 2. Now we need to give the `<Button>` some properties
 
+Make sure to also import `<Button>`
+
 ```javascript
+// At the top of your file
+import { Text, View, Button } from 'react-native';
+
 render() {
     return (
         <View>
