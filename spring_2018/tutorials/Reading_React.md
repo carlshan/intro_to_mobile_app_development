@@ -26,7 +26,7 @@ But wait, you might ask. Where in the world did 'react' and 'react-native' come 
 
 Well, when you ran `create-react-native-app 01_firstapp` a folder called `node_modules` was created in `01_firstapp`. If you open that folder up, it will look like this:
 
-![Node Modules](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/01_firstapp/images/node_modules.png)
+![Node Modules](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/node_modules.png)
 
 Inside this folder are a bunch of libraries that the command `create-react-native-app 01_firstapp` installed. 
 
