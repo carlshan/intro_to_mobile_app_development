@@ -6,6 +6,18 @@ In this third and final part of the game tutorial, you will complete the followi
 
 If you solve these exercises, help those around you finish them!
 
+## Try the exercises below on your own without hints
+
+Before looking at the rest of this tutorial, try the following exercises:
+
+0. **[Introductory]** Show whose turn it is somewhere on your app.
+1. **[Medium]** Create a button that, when tapped, restarts the game.
+2. **[Challenging]** Create a way to check if someone has won the game.
+
+Try each of these exercises on your own. 
+
+If you are stuck you can use the guide below to assist you.
+
 ## Exercise 0: Show whose turn it is in
 
 Edit the `render()` function to display whose turn it is.
@@ -114,5 +126,12 @@ render() {
   
   > **HINT:** Remember to also add the `this.checkWin = this.checkWin.bind(this);` line to the `constructor()` function.
   
-  ## Finished?
-  If you've completed all three steps above, congratulations! You have a functioning tic-tac-toe game built using React Native. Great work!
+## Finished?
+If you've completed all three steps above, congratulations! You have a functioning tic-tac-toe game built using React Native. Great work!
+  
+Here are some possible next features you can explore:
+
+1. **[Introductory]** Keep a global scoreboard that keeps track of which players have won and how many times they've won.
+2. **[Medium]** Allow for the user to select how large they want to board to be (e.g., 4x4)
+3. **[Hard]** Create an AI that plays against the player.
+
