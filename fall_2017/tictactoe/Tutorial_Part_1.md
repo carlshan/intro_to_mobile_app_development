@@ -28,8 +28,8 @@ Here's what you need to do:
 2. Now delete everything in `App.js` and save.
 3. Make a folder called `images` in the folder.
 4. Go to the following two links, save them and put them into the 'images' folder.
-	* [Download this image of "X"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/tictactoe/images/X.png)
-	* [Download this image of "O"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/tictactoe/images/O.png)
+	* [Download this image of "X"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/X.png)
+	* [Download this image of "O"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/O.png)
 5. Make another folder called `components` in the `my-app` folder.
 6. Make an empty file called `Piece.js` in the `components` folder.
 7. Make another empty file called `Board.js` in the `components` folder.
