@@ -14,7 +14,7 @@ In this tutorial we are going to make a tic-tac-toe game using React Native.
 
 Your final React Native app will look like the below:
 
-![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/final_tictactoe.png?raw=true)
+![Final Tictactoe](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/final_tictactoe.png)
 
 ## Setup
 We need to do a few things in order to start off our program.
@@ -36,13 +36,13 @@ Here's what you need to do:
 
 When you are done, your file and folder structure should look like the following:
 
-![File and Folders](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/file_and_folders2.png)
+![File and Folders](https://raw.github.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/file_and_folders2.png)
 
 The reason we are making these files is to separate the code that controls different parts of our program into different files. We want each file to be "resposible" for a different part of our code.
 
 See the below for what I mean:
 
-![Division](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/division.png?raw=true)
+![Division](https://raw.github.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/division.png?raw=true)
 
 So now let's get to editing each of the three files.
 
@@ -299,7 +299,7 @@ Now, let's modify the `render()` function like so:
 
 Now that we've done all this plumbing, try running your program. You should see the following:
 
-![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/numbers.png?raw=true)
+![Final Tictactoe](https://raw.github.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/numbers.png?raw=true)
 
 Nice job!
 

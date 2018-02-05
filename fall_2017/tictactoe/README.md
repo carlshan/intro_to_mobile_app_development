@@ -7,7 +7,8 @@ This folder contains a tutorial on building Tic Tac Toe in React Native.
 
 By following this tutorial, you will build a final React Native app that will look like the below:
 
-![Final Tictactoe](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/final_tictactoe.png?raw=true)
+![Final Tictactoe](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/final_tictactoe.png)
+
 
 # Start the Tutorial
 The tutorial is broken down into 3 parts. You can find links to each part of the tutorial below:
