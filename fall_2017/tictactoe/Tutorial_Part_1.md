@@ -19,18 +19,19 @@ Your final React Native app will look like the below:
 ## Setup
 We need to do a few things in order to start off our program.
 
-**NOTE for Middle School Students:** Remember that, for many of you, since you don't have `sudo` access you couldn't `npm start` in new folders you created with the `create-react-native-app`. Instead, we are going to modify the `my-app` folder that many of you were successfully able to use.
-
 Here's what you need to do:
 
-1. Go into your `my-app` folder and save your old work by making a copy of the files. We are going to be overwriting the `App.js` file.
-	* You can save the old `App.js` with a different name.
-2. Now delete everything in `App.js` and save.
-3. Make a folder called `images` in the folder.
+
+1. Open Terminal
+2. In Terminal, `cd Desktop`
+3. Then type `create-react-native-app tictactoe`. This will create a folder called `tictactoe` with all of the requisite files.
+4. Wait for the `create-react-native-app` command to finish running in Terminal.
+5. Then open this folder up.
+3. Make a folder inside called `images` in the folder.
 4. Go to the following two links, save them and put them into the 'images' folder.
 	* [Download this image of "X"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/X.png)
 	* [Download this image of "O"](https://raw.githubusercontent.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/O.png)
-5. Make another folder called `components` in the `my-app` folder.
+5. Make another folder inside called `components` in the `my-app` folder.
 6. Make an empty file called `Piece.js` in the `components` folder.
 7. Make another empty file called `Board.js` in the `components` folder.
 
