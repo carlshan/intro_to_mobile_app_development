@@ -1,6 +1,6 @@
 # Part 2 of 3 of the Tic-Tac-Toe Game Tutorial
 
-Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_1.md) before you go on.
+Make sure you completed everything in [Part 1 of this tutorial](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/fall_2017/tictactoe/Tutorial_Part_1.md) before you go on.
 
 ## Editing `Piece.js`
 
@@ -138,7 +138,7 @@ Now that we have imported the `Piece` component, we need to use it:
 
 Your app should now render this:
 
-![With Xs](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/images/board_placeholder_xs.png?raw=true)
+![With Xs](https://raw.github.com/carlshan/intro_to_mobile_app_development/master/fall_2017/tictactoe/images/board_placeholder_xs.png?raw=true)
 
 So why is everything an "X"?
 
@@ -308,5 +308,5 @@ Tada! Now we have linked everything together so that users can tap squares and p
 
 Try your code to verify that everything works up until this point.
 
-If everything is dandy, you can [move on to the last part of the tutorial where you will be working on a number of different exercises](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/tictactoe/Tutorial_Part_3.md).
+If everything is dandy, you can [move on to the last part of the tutorial where you will be working on a number of different exercises](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/fall_2017/tictactoe/Tutorial_Part_3.md).
 
