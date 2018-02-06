@@ -138,7 +138,7 @@ But essentially, it allows us to quickly get elements out of an Object.
 
 For example:
 
-```
+```javascript
 // Let's make an Object.
 var myObject = {name: 'Carl', role: 'CS Teacher'};
 
@@ -150,7 +150,7 @@ let {name, role} = myObject;
 
 In the past we had to do this:
 
-```
+```javascript
 var myObject = {name: 'Carl', role: 'CS Teacher'};
 
 var name = myObject.name
