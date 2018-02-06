@@ -27,7 +27,7 @@ export default class App extends React.Component {
             {key: 'Pi Patel'},
           ]}
           
-          renderItem = {( {item} ) => {return <Text>{item}</Text>}}
+          renderItem = {( {item} ) => {return <Text>{item.key}</Text>}}
 
          />
       </View>
@@ -52,7 +52,7 @@ data = {[
 2. `renderItem`: this needs to be a function that returns what should be rendered for each row of the data. In my example it looks like this:
 
 ```javascript
-renderItem = {( {item} ) => {return <Text>{item}</Text>}}
+renderItem = {( {item} ) => {return <Text>{item.key}</Text>}}
 ```
 
 ## Breaking this down
@@ -84,7 +84,7 @@ The key needs to be called `key`. Otherwise React Native will give you a warning
 Now let's look at the `renderItem` prop:
 
 ```javascript
-renderItem = {( {item} ) => {return <Text>{item}</Text>}}
+renderItem = {( {item} ) => {return <Text>{item.key}</Text>}}
 ```
 
 What the heck is going on here? 
@@ -102,13 +102,13 @@ This part of the line is pretty simple. It's simply passing a `prop`.
 #### Part 2: Understanding the function being passed
 The function being passed to the `renderItem` prop is:
 
-`( {item} ) => { return <Text> {item} </Text> }`
+`( {item} ) => { return <Text> {item.key} </Text> }`
 
 Here's that function in an expanded form (e.g., not as an arrow function):
 
 ```javascript
 function ( {item} ) {
-	return <Text> {item} </Text>
+	return <Text> {item.key} </Text>
 }
 ```
 
@@ -176,7 +176,7 @@ So, using our newfound knowledge of `destructuring` let's analyze this function 
 
 `function ( {item} ) { ... } `
 
-So what's happening is that some `Object` is being passed to the `function` and we are only keeping the part of the `Object` that is named `item` and using that in our function.
+So what's happening is the following: some `Object` is being passed to the `function` and we are only keeping the part of the `Object` that is named `item`.
 
 #### Part 3: What to `return`?
 
@@ -184,13 +184,13 @@ Okay, so we understand the `function ( {item} ) { ... }` part of the line.
 
 Now we just need to figure out what it returns. In this case we want to return:
 
-`<Text>{item}</Text>`
+`<Text>{item.key}</Text>`
 
-This just makes a `<Text>` component and puts the `item` inside of it.
+This just makes a `<Text>` component and puts the `item.key` inside of it.
 
 In other words, the `renderItem` prop gets the function:
 
-`( {item} ) => {return <Text>{item}</Text>}`
+`( {item} ) => {return <Text>{item.key}</Text>}`
 
 As a result it takes each row, finds the `item` attribute of the `Object` that's being passed and inserts it in our `<Text>`.
 
@@ -211,7 +211,7 @@ export default class App extends React.Component {
             {key: 'Pi Patel'},
           ]}
           
-          renderItem = {( {item} ) => {return <Text>{item}</Text>}}
+          renderItem = {( {item} ) => {return <Text>{item.key}</Text>}}
 
          />
       </View>
