@@ -136,16 +136,6 @@ What does that do?
 
 But essentially, it allows us to quickly get elements out of an Object.
 
-For example:
-
-```javascript
-// Let's make an Object.
-var myObject = {name: 'Carl', role: 'CS Teacher'};
-
-// Now let's use destructuring.
-let {name, role} = myObject;
-```
-
 **Destructuring allows us to get elements from an Object**
 
 In the past we had to do this:
@@ -162,13 +152,12 @@ But now with destructuring we can do:
 
 ```javascript
 var myObject = {name: 'Carl', role: 'CS Teacher'};
-var {name, role} = myObject;
+var { name, role } = myObject;
 ```
 
-So let's see how that went:
+So let's see how that went by printing the variables. Do we get what we expect?
 
 ```javascript
-// Let's see what values the variables have
 console.log(name);
 // prints 'Carl'
 
@@ -177,8 +166,11 @@ console.log(role);
 
 ```
 
-> You can read this [helpful introductory tutorial on destructuring](http://wesbos.com/destructuring-objects/) if you want to learn more.
+Yay!
 
+Now you should understand the idea of `destructuring` better. 
+
+> You can read this [helpful introductory tutorial on destructuring](http://wesbos.com/destructuring-objects/) if you want to learn more.
 
 So, using our newfound knowledge of `destructuring` let's analyze this function again:
 
@@ -186,7 +178,7 @@ So, using our newfound knowledge of `destructuring` let's analyze this function 
 
 So what's happening is that some `Object` is being passed to the `function` and we are only keeping the part of the `Object` that is named `item` and using that in our function.
 
-#### Part 3: What to return?
+#### Part 3: What to `return`?
 
 Okay, so we understand the `function ( {item} ) { ... }` part of the line. 
 
