@@ -54,7 +54,7 @@ export default class ReactCalculator extends Component {
 4. If there are any problems, ask those around you or ask me.
 
 
-### Laying Out The Calculator
+### PART 1: Laying Out The Calculator
 > (The source of the content below is from Kyle's blog [here](https://kylewbanks.com/blog/react-native-tutorial-part-2-designing-a-calculator))
 
 The first thing we’ll want to do is layout the calculator. The calculator is going to have two primary sections:
@@ -160,7 +160,7 @@ render() {
 }
 ```
 
-### Adding the Input Buttons: InputButton.js
+### PART 2: Adding the Input Buttons: InputButton.js
 Alright so our base layout is setup and our styles are externalized, so it’s time to add some buttons. We’re going to start by creating an `InputButton.js` file in the `calculatorapp` that will be used for displaying each button on the calculator.
 
 Create the file `InputButton.js` and add the following code to it:
@@ -236,7 +236,7 @@ Edit `Style.js` to now include the following in the Style variable:
 
 Okay, so now we need to make a `<InputButton>` component for each of the buttons.
 
-### Coding `_renderInputButtons()`
+### PART 3: Coding `_renderInputButtons()`
 Rather than defining the button one-by-one in the render function, let’s try to do this a little more programatically.
 
 First we will define an array that represents the rows and inputs that will be displayed in the calculator. Next, we’ll create a function to dynamically generate the buttons, and call this from within `render()`. This new function,  `_renderInputButtons`, will iterate each row in the inputButtons array, and for each input in the row, create an InputButton and add it to the row.
@@ -317,10 +317,10 @@ Alright, give the application a run and you’ll see the calculator laid out lik
 At this point we have our calculator laid out and styled, but we still need to develop the actual functionality. In the next part of this tutorial, we’ll continue by adding touch event handling, implementing [State](https://facebook.github.io/react-native/docs/state.html) for UI updates, and perform the core arithmetic logic based on user input!
 
 
-## Writing the Logic of the Calculator
+### PART 4: Writing the Logic of the Calculator
 Now that we have the calculator looking like what we want we are going to write the logic that actually implements the calculations!
 
-### Handling Touch Events
+#### Handling Touch Events
 The first thing we need to do before we proceed is to [handle touch events](https://facebook.github.io/react-native/docs/handling-touches.html) on the InputButtons.
 
 First up, we’ll update the InputButton to use a Touchable view instead of the View it currently uses:
@@ -404,7 +404,7 @@ For now, all we’re doing is calling alert to show a dialog with the input valu
 
 Now that we can handle touch events, and we know which button is being touched, we can start to develop the actual calculator functionality.
 
-### Using State
+#### PART 5: Using State
 State allows us to update the UI of our applications based on dynamic data. The first thing we’ll use State for is to update the display based on the numbers entered by the user.
 
 First, let’s add a constructor to our ReactCalculator class to initialize the input number to zero:
@@ -493,7 +493,7 @@ Take a look:
 ```
 Run the app again, and you should be able to enter numbers and have them appear in the display! So how does this work? Any time you call the`this.setState()` function, React determines which components need to be reloaded to reflect the updated state. In this case, our displayText `<Text>` view is updated based on the value of `state.inputValue`, so by calling `this.setState()` with a new inputValue, the `<Text>` view is automatically reloaded.
 
-### The Final Stretch
+#### PART 6: The Final Stretch
 At this point, our application is almost there. The last thing we need to do is handle the arithmetic operations.
 
 We’ll start by storing the type of operation and clearing the display whenever an arithmetic symbol is selected, and highlighting the selected symbol:
@@ -620,7 +620,7 @@ Here’s a look at what `24 / 3` looks like:
 
 Now we are done!
 
-### Exercises
+### PART 7: Exercises
 Even though the tutorial has come to an end, there are a couple of intentionally unhandled components that you can try to solve on your own from here:
 
 1. The decimal `.` operator remains unimplemented. How can you take what you’ve learned to implement this?
