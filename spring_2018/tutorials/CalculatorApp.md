@@ -284,12 +284,12 @@ Now it's your job to implement it. I've added instructions and skeleton code for
 > HINTS: 
 > 
 > 1. Loop over all the elements of `inputButtons`
-2. For each element, create an `<InputButton>` component that passes the element as a prop.
-3. `<InputButton>` takes a `value` prop. That will display the specific symbol on your calculator (e.g., "*" or "+"). Figure out what to pass into this prop.
-4. The function should return an array of `<View>` components, where each `<View>` component should look something like:
+> 2. For each element, create an `<InputButton>` component that passes the element as a prop.
+> 3. `<InputButton>` takes a `value` prop. That will display the specific symbol on your calculator (e.g., "*" or "+"). Figure out what to pass into this prop.
+> 4. The function should return an array of `<View>` components, where each `<View>` component should look something like:
 `<View style={Style.inputRow} key={SOME_UNIQUE_KEY}>{inputRow}</View>`
-	* **NOTE**: The key on the Components within `_renderInputButtons` is required when you are creating an array of Components, and must be unique to each Component in the array.*
-5. In the above example, the `{inputRow}` variable should evaluate to an array that looks like `[<InputButton>, <InputButton>, <InputButton> ...]`
+>	* **NOTE**: The key on the Components within `_renderInputButtons` is required when you are creating an array of Components, and must be unique to each Component in the array.*
+> 5. In the above example, the `{inputRow}` variable should evaluate to an array that looks like `[<InputButton>, <InputButton>, <InputButton> ...]`
 
 
 ```javascript

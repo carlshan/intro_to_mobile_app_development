@@ -8,10 +8,14 @@ This tutorial on how to create a calculator app is adapted from Kyle Banks' [Rea
 ## Instructions
 
 ### Creating the starter folder
+We're going to make a folder called `calculatorapp` with the `create-react-native-app` command.
+
+Detailed instructions below:
+
 1. First, you should open Terminal and run the command `cd Desktop`.
 2. Then run `create-react-native-app calculatorapp`
 	* This will create a folder called `calculatorapp` on your Desktop. Inside there should be a lot of starter files for you to modify and edit.
-	* The key file is called `App.js`
+	* The key file we will be modifying is called `App.js`
 3. If you run into any issues in doing this, ask those around you for help. 
 4. If no one else can help you, find me and we will resolve it together.
 
