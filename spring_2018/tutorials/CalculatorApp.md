@@ -360,7 +360,7 @@ Replace the part of the `inputRow.push()` part of the function with the followin
             <InputButton
                 value={input}
                 onPress={() => this._onInputButtonPressed(input)}
-                key={r + "-" + i}/>
+                key={/*YOUR KEY HERE*/}/>
         );
         ...
     }
@@ -522,7 +522,7 @@ We’ll start by storing the type of operation and clearing the display whenever
                 value={input}
                 highlight={this.state.selectedSymbol === input}
                 onPress={this._onInputButtonPressed.bind(this, input)}
-                key={r + "-" + i}/>
+                key={/*YOUR KEY HERE*/}/>
         );
         ...
     }
