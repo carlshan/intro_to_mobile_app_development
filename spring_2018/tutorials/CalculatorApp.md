@@ -281,13 +281,38 @@ Now it's your job to implement it. I've added instructions and skeleton code for
 
 > HINTS: 
 > 
-> 1. Loop over all the elements of `inputButtons`
-> 2. For each element, create an `<InputButton>` component that passes the element as a prop.
-> 3. `<InputButton>` takes a `value` prop. That will display the specific symbol on your calculator (e.g., "*" or "+"). Figure out what to pass into this prop.
-> 4. The function should return an array of `<View>` components, where each `<View>` component should look something like:
+> Ultimately your `_renderInputButtons` function should return something that looks like:
+
+```javascript
+<View>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+</View>
+<View>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+</View>
+<View>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+	<InputButton>
+</View>
+```
+
+> So we're going to generate the above through a few loops:
+> 
+> 2. Loop over all the elements of `inputButtons`
+> 3. For each element, create an `<InputButton>` component that passes the element as a prop.
+> 4. `<InputButton>` takes a `value` prop. That will display the specific symbol on your calculator (e.g., "*" or "+"). Figure out what to pass into this prop.
+> 5. The function should return an array of `<View>` components, where each `<View>` component should look something like:
 `<View style={Style.inputRow} key={SOME_UNIQUE_KEY}>{inputRow}</View>`
 >	* **NOTE**: The key on the Components within `_renderInputButtons` is required when you are creating an array of Components, and must be unique to each Component in the array.*
-> 5. In the above example, the `{inputRow}` variable should evaluate to an array that looks like `[<InputButton>, <InputButton>, <InputButton> ...]`
+> 6. In the above example, the `{inputRow}` variable should evaluate to an array that looks like `[<InputButton>, <InputButton>, <InputButton> ...]`
 
 
 ```javascript
@@ -619,8 +644,8 @@ Here’s a look at what `24 / 3` looks like:
 Now we are done!
 
 ### PART 7: Exercises
-Even though the tutorial has come to an end, there are a couple of intentionally unhandled components that you can try to solve on your own from here:
+In this final part, you will complete the following exercises. Try to to do AT LEAST ONE of the below on your own:
 
-1. The decimal `.` operator remains unimplemented. How can you take what you’ve learned to implement this?
-2. Try dividing by zero. Can you fix this?
-3. There’s no way to clear `(C)` the current input or clear everything `(CE)` in order to restart your calculations with a clean slate. Implement thse two features.
+1. The decimal `.` operator remains unimplemented. How can you take what you’ve learned to implement this? 
+2. Try dividing by zero. It doesn't work. What should the correct behavior be if someone divides by 0 on a calculator? Can you implement this behavior?
+3. There’s no way to clear `(C)` the current input or clear everything `(CE)` in order to restart your calculations with a clean slate. Implement these two buttons.
