@@ -12,7 +12,7 @@ Imagine you have the following setup:
 `<ParentComponent>` is a React Component that renders a bunch of other components in its `render()` function. It looks like this:
 
 ```javascript
-default export class ParentComponent extends React.Component {
+export default class ParentComponent extends React.Component {
 
 	render() {
 		return (
@@ -40,7 +40,7 @@ Passing `props` from the `<ParentComponent>` to `<ChildComponent>` is pretty str
 Okay, bad jokes aside, here's what passing props from `<Parent>` to `<Child>` looks like:
 
 ```javascript
-default export class ParentComponent extends React.Component {
+export default class ParentComponent extends React.Component {
 
 	render() {
 		return (
@@ -63,7 +63,7 @@ For example if we have a button that, when pressed, changes a value, we can simp
 See below:
 
 ```javascript
-default export class ParentComponent extends React.Component {
+export default class ParentComponent extends React.Component {
 
 	render() {
 		return (
@@ -104,7 +104,7 @@ I'll walk you through how you can pass data from a `<Child>` to a `<Parent>`.
 First, let's make a function in the parent. It'll be the function that will get some data from the `<Child>` component.
 
 ```javascript
-default export class ParentComponent extends React.Component {
+export default class ParentComponent extends React.Component {
 
 	updateData(dataFromChild) {
 		this.setState(
@@ -132,7 +132,7 @@ In the `<ChildComponent>` class:
 
 
 ```javascript
-default export class ChildComponent extends React.Component {
+export default class ChildComponent extends React.Component {
 
 	render() {
 		return (
@@ -171,7 +171,7 @@ We're going to create one more function that will *help* us out. Let's call that
 In this case, all the helper function does is call the `this.props.update` function with some given input.
 
 ```javascript
-default export class ChildComponent extends React.Component {
+export default class ChildComponent extends React.Component {
 
 	helperFunction() {
 	
@@ -189,7 +189,7 @@ As a result, we can now use that as our `onPress` in our `<Button>` component in
 
 
 ```javascript
-default export class ChildComponent extends React.Component {
+export default class ChildComponent extends React.Component {
 
 	helperFunction() {
 	
