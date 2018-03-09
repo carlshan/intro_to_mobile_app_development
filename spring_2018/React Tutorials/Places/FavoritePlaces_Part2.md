@@ -192,6 +192,11 @@ In other words, it needs to look something like:
 
 > **NOTE:** You can find the latitude and longitude of a location by searching it on Google Maps, and then right-clicking on it and clicking on "What's here?".
 
+If you are successful, you should see this:
+
+![User Input](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/nueva_marker.png)
+
+
 
 ### Allowing Users to Add a Place
 
