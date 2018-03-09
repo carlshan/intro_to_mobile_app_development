@@ -6,7 +6,7 @@ This is Part 1 of a 2-part tutorial on learning how to use `<TabNavigator>` and 
 
 Here is Part 2 of the tutorial:
 
-* Part 2
+* [Part 2](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/tutorials/Places/FavoritePlaces_Part2.md)
 
 This first part of the tutorial will cover the basics of `<TabNavigator>` and `<MapView>`. The second part of the tutorial will cover passing data around different screens by taking advantage of how `<TabNavigator>` works.
 
@@ -412,5 +412,5 @@ Voila! Now the map centers on the Nueva School!
 
 You are now done with Part 1 of this tutorial.
 
-Click here to go onto Part 2.
+Click here to go onto [Part 2](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/tutorials/Places/FavoritePlaces_Part2.md).
 
