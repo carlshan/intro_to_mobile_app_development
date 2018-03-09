@@ -117,7 +117,7 @@ render() {
 
 Great. So now users can input a piece of text.
 
-image testing user input gif
+![User Input](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/TestingUserInput.gif)
 
 ### Exercise: Save what users enter into `this.state`
 
