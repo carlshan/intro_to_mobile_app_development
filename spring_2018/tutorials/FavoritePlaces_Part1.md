@@ -2,14 +2,19 @@
 By Carl Shan of [The Nueva School](www.nuevaschool.org)
 
 ## Description
-This is part 1 of a 3 part tutorial on learning how to use `<TabNavigator>` and also `<MapView>`.
+This is Part 1 of a 2-part tutorial on learning how to use `<TabNavigator>` and also `<MapView>`.
 
-Here are the other parts of the tutorial:
+Here is Part 2 of the tutorial:
 
 * Part 2
 
+This first part of the tutorial will cover the basics of `<TabNavigator>` and `<MapView>`. The second part of the tutorial will cover passing data around different screens by taking advantage of how `<TabNavigator>` works.
 
-This first part of the tutorial will cover the basics of `<TabNavigator>` and `<MapView>`. The next few parts of the tutorial will cover passing data around different screens by taking advantage of how `<TabNavigator>` works.
+By going through this tutorial you will learn:
+
+1. How to create a tab
+2. How to create a map in your application
+3. How to pass data around two sibling components
 
 ## What are we building?
 
@@ -17,7 +22,9 @@ We are going to be building an application that renders a real map, as well as a
 
 In other words, this will store a number of our favorite places!
 
-Two images here of the final screens.
+Here is our final app:
+
+![Final App](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/FinalApp.gif)
 
 ## Setup
 
@@ -88,8 +95,7 @@ So let's look around for what the `TabNavigator` function needs.
 
 If you Google for `TabNavigator react-navigation` you will eventually find the following page: [TabNavigator reference](https://reactnavigation.org/docs/tab-based-navigation.html)
 
-image
-![React Navigation]()
+![React Navigation](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/react_navigation_api_reference.png)
 
 This is the official `API reference` for this function.
 
@@ -106,8 +112,7 @@ Well, if you click on `Docs` at the top of the web browser, it will bring you to
 
 Click on that (or just [click here](https://reactnavigation.org/docs/tab-based-navigation.html)) to see a written document describing the use of `TabNavigator()` with an example:
 
-image
-![Documentation]()
+![React Navigation](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/react_navigation_documentation.png)
 
 Looking at this example, we can tell that `TabNavigator()` needs its first argument to look something like the following:
 
@@ -219,9 +224,7 @@ export default class App extends Component {
 
 Great! Now, when you boot up your app on your phone or emulator it should look like this:
 
-image
-gif
-
+![Working Tabs](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/WorkingTabs.gif)
 
 Hooray!
 
@@ -252,7 +255,7 @@ const TabNav = TabNavigator(
 
 Now, save your code and your app should now show the tab that is being colored as orange.
 
-image here
+![Orange Tabs](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/orange_tabs.png)
 
 Great!
 
@@ -310,7 +313,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 Now save your code and you should have icons!
 
-image here
+![Working Icons](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/ColoredIcons.gif)
 
 ### OPTIONAL SECTION: Changing the icons.
 
@@ -378,7 +381,7 @@ const styles = StyleSheet.create({
 
 Awesome. Now when you reload your app you should have a map of the United States!
 
-image here
+![Working MapView](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/working_mapview.png)
 
 ### Centering on Nueva
 
@@ -405,7 +408,7 @@ Change the `render()` function so that it now returns:
 
 Voila! Now the map centers on the Nueva School!
 
-image here
+![Nueva Centered](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/images/places/nueva_centered.png)
 
 You are now done with Part 1 of this tutorial.
 

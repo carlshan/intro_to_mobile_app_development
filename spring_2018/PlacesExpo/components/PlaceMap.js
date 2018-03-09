@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, StyleSheet, AsyncStorage } from 'react-native';
+import {View, StyleSheet } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
 export default class PlaceMap extends Component {
@@ -29,11 +29,12 @@ export default class PlaceMap extends Component {
     return (
       <MapView style={styles.map}
         initialRegion={{
-          latitude: 38.8977,
-          longitude: -77.0365,
-          latitudeDelta: 0.2,
-          longitudeDelta: 0.2,
-          title: "White House"
+          latitude: 37.545135,
+          longitude: -122.299969,
+          latitudeDelta: 0.05,
+          longitudeDelta: 0.05,
+          mapType: 'standard',
+          title: "Nueva School"
         }}
         >
         {this.renderMarkers()}

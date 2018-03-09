@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Button, AsyncStorage} from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button} from 'react-native'
 
 export default class AddPlace extends React.Component {
   constructor() {
@@ -26,8 +26,6 @@ export default class AddPlace extends React.Component {
 
 
   render() {
-    console.log("Add Place")
-    console.log(this.props)
     return (
       <View style={styles.addPlaceScreen}>
         <View style={styles.description}>
@@ -60,8 +58,7 @@ export default class AddPlace extends React.Component {
         <View style={styles.button}>
           <Button
             onPress={this.addPlace}
-            title="Add"
-
+            title="Add Place"
             />
         </View>
       </View>
