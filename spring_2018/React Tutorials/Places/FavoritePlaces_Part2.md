@@ -5,7 +5,7 @@ By Carl Shan of [The Nueva School](www.nuevaschool.org)
 
 If you have not finished Part 1 of this tutorial, please go back and finish it.
 
-* [Part 1](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/tutorials/Places/FavoritePlaces_Part1.md)
+* [Part 1](https://github.com/carlshan/intro_to_mobile_app_development/blob/master/spring_2018/React%20Tutorials/Places/FavoritePlaces_Part1.md)
 
 In Part 2 of the tutorial, we will learn how to pass data from the `AddPlace.js` screen to the `PlaceMap.js` screen.
 
