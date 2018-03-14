@@ -41,6 +41,7 @@ In order to build this, we actually need to install another Javascript library c
 Install it in Terminal with:
 
 `cd Places`
+
 `npm install --save react-navigation`
 
 This library contains a lot of code that allows us to use other pre-built components and customize them as we see fit.
@@ -139,10 +140,9 @@ Copy the following lines of code into `PlaceMap.js`
 
 ```javascript
 import React, { Component } from 'react';
-import {View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 export default class PlaceMap extends Component {
-
 
   render() {
     return (
@@ -161,7 +161,7 @@ We also need to do the same for `AddPlace.js`
 
 ```javascript
 import React, { Component } from 'react';
-import {View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 export default class AddPlace extends Component {
 
@@ -279,7 +279,7 @@ const TabNav = TabNavigator(
       inactiveTintColor: 'gray',
     },
     // ********************** //
-    // below is the new stuff //
+    // below is the code you need to add //
     // ********************** //
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
@@ -321,7 +321,12 @@ Now save your code and you should have icons!
 
 Now, if you want to use different icons you need to see the full list of icons [here](https://ionicframework.com/docs/ionicons/) and click on an icon. 
 
-Whatever is the name of that icon (e.g., `ios-alarm` if you are developing for iOS or `md-alarm` if you are developing for Android), you can place it into the following two lines of code that is inside the `navigationOptions`:
+Clicking on it will reveal the name of an icon. To use it:
+
+* **If you are developing for iOS:** It should look something like `ios-alarm`
+* **If you are developing for Android:** Use `md-alarm` if you are developing for Android). The `md` stands for `Material Design` which is the name of the theme that Google/Android uses.
+
+You can place it into the following two lines of code that is inside the `navigationOptions`:
 
 > **NOTE:** Remember, the `...` just means it's the same code as you already have, and I just didn't want to clutter up this tutorial with redundant code.
 
@@ -332,11 +337,11 @@ navigationOptions: (
     if (...) {
     
         ...
-        iconName = <<NEW ICON NAME HERE>> + suffix
+        iconName = "NEW ICON NAME HERE" + suffix
     } else if (...) {
     
         ...
-        iconName = <<NEW ICON NAME HERE>> + suffix
+        iconName = "NEW ICON NAME HERE" + suffix
     }
     
     ...
