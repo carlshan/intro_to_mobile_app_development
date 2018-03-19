@@ -302,6 +302,12 @@ Now it's your job to implement it. I've added instructions and skeleton code for
  	<InputButton>
 	<InputButton>
 </View>
+<View>
+ 	<InputButton>
+ 	<InputButton>
+ 	<InputButton>
+	<InputButton>
+</View>
 ```
 
 > So we're going to generate the above through a few loops:
