@@ -45,13 +45,15 @@ export default class Game extends Component {
 
 
   render() {
-
-    // add code that renders the "number choosing screen"
     if (this.state.myNumber == null) {
-      return (<ChooseRange />)
-    }
-
-    if (this.state.winner == true) {
+      return (
+        <ChooseRange
+          handleLow={this.handleLow}
+          handleHigh={this.handleHigh}
+          chooseRange={this.chooseRange}
+        />
+      )
+    } else if (this.state.winner) {
       return (
         <View style={{
           flex: 1,
