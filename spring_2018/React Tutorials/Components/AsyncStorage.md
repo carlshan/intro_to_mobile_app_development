@@ -281,13 +281,4 @@ And that's it! Great job learning `AsyncStorage`.
 ## Learn More
 To learn more about `AsyncStorage`, including a bunch of methods I didn't have time to explain (`mergeItem()`, `getAllKeys()`, `clear()` and more), check out the [official Facebook documentation](https://facebook.github.io/react-native/docs/asyncstorage.html).
 
-## Exercises
-
-Now that you have completed this tutorial, try to do the following exercises:
-
-1. Create a simple app that asks for a user's name and saves it so that the name is displayed even if the app is reloaded.
-2. Use `AsyncStorage` to keep track of scores for a leaderboard from one of the previous games (Tic-Tac-Toe, Choose Number) that you've worked on.
-3. Create your own way of using `AsyncStorage`.
-
-
 
